@@ -2,6 +2,8 @@
 ## 🟩 中文版
 > ## 適用情境 與 優點
 > **人在外網用 Mac/PC → 透過 WireGuard VPN → 連回家 存取 DGX Spark**
+> **能遠端使用 Open WebUI 服務**
+> **DGX Spark (第02天): 啟動 Open WebUI container — 需要先完成 [(第01天) WireGuard VPN 指南](https://github.com/Sniper711/DGX-Spark-Day02-start-Open-WebUI-container-2025-12-26) 的設置** 
 > - 全面改用 WireGuard
 >   - 以 DGX Spark 為 VPN Server. (Mac/PC = Client)
 >   - VPN 穿透率極高，行動網路開熱點上網幾乎不被行動網路阻擋.
