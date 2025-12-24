@@ -1,4 +1,4 @@
-# DGX Spark (第01天) WireGuard VPN 指南 2025-12-20
+# DGX Spark (第02天) 啟動 Open WebUI container 2025-12-26
 ## 🟩 中文版
 > ## 適用情境 與 優點
 > **人在外網用 Mac/PC → 透過 WireGuard VPN → 連回家 存取 DGX Spark**
