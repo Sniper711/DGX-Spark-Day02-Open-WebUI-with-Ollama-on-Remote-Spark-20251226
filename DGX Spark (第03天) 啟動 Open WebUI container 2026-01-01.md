@@ -1,4 +1,4 @@
-# DGX Spark (第02天) 啟動 Open WebUI container 2025-12-26
+# DGX Spark (第03天) 啟動 Open WebUI container 2026-01-01
 ## 🟩 中文版
 > ## 適用情境 與 優點
 > **人在外網用 Mac/PC → 透過 WireGuard VPN → 連回家 存取 DGX Spark**
