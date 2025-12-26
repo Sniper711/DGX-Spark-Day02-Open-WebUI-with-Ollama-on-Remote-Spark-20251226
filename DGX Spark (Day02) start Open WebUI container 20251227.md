@@ -19,9 +19,9 @@
 
 ## 先決條件（一次性）
 
-### 1. Spark 上 Docker 權限
+### 1. DGX Spark 上 Docker 權限
 
-確保使用者已在 `docker` 群組：
+確保使用者已在 `docker` 群組, 以後此使用者執行docker指令不用sudo：
 
 ```bash
 getent group docker
@@ -34,10 +34,10 @@ sudo usermod -aG docker davislin
 newgrp docker
 ```
 
-驗證：
+驗證此使用者執行docker指令不用sudo：
 
 ```bash
-docker ps
+docker ps -a
 ```
 
 ---
