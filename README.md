@@ -1,4 +1,4 @@
-<sub><sup>This is an extension of my previous article on the two Server/Client connection methods for DGX Spark: [Day01A](https://github.com/Sniper711/DGX-Spark-Day01A-Remote-Access-from-Internet-Guide-20251220A/tree/main) and [Day01B](https://github.com/Sniper711/DGX-Spark-Day01B-Local-Access-from-Same-Subnet-Guide-20251220B). Here, I'll fine tune the steps for setting up Open WebUI on NVIDIA DGX Spark from NVIDIA official site, assuming we're not using NVIDIA SYNC connections.</sup></sub>
+<sub><sup>This is an extension of my previous article on the two Server/Client connection methods for DGX Spark: [Day01A](https://github.com/Sniper711/DGX-Spark-Day01A-Remote-Access-from-Internet-Guide-20251220A/tree/main) and [Day01B](https://github.com/Sniper711/DGX-Spark-Day01B-Local-Access-from-Same-Subnet-Guide-20251220B). Here, I'll fine tune the NVIDIA official steps (which through NVIDIA SYNC) for setting up Open WebUI on NVIDIA DGX Spark, assuming we're not using NVIDIA SYNC connections.</sup></sub>
 # DGX-Spark-Day03-start-Open-WebUI-container-2026-01-01
 
 ---
