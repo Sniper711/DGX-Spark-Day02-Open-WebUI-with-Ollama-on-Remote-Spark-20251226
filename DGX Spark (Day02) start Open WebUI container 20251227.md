@@ -1,4 +1,4 @@
-# DGX Spark (Day02) start Open WebUI container 2026-01-01
+# DGX Spark (Day02) start Open WebUI container 20251227
 ## 🟩 English
 
 
