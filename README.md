@@ -1,3 +1,4 @@
+<sub><sup>This is an extension of my previous article on the two Server/Client connection methods for DGX Spark: Day01A and Day01B. Here, I'll modify the steps for setting up Open WebUI on NVIDIA DGX Spark, assuming we're not using NVIDIA SYNC connections.</sup></sub>
 # DGX-Spark-Day03-start-Open-WebUI-container-2026-01-01
 
 ---
