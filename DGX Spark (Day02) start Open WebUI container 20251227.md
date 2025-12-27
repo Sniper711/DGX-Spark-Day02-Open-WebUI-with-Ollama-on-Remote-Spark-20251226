@@ -11,9 +11,110 @@
 >   - 自己掌握 Server/Client 連線的設定細節
 >   - 不使用 NVIDIA SYNC 的連線方式
 > - **修改 DGX Spark 建立 Open WebUI 的 NVIDIA官方步驟** 
->   - 官方步驟是基於 NVIDIA SYNC 連線的.
+>   - 官方步驟是基於 NVIDIA SYNC 連線的
+>   - 這裡只修改一點點
 > - **SHH 一行指令登入 DGX Spark**
 >   - 重開機之後，只要 Mac/PC (Client) 執行一行SHH指令，超級簡單。
+
+---
+
+**打開 NVIDIA "[Open WebUI with Ollama : Set up WebUI on Remote Spark with NVIDIA Sync](https://build.nvidia.com/spark/open-webui/sync) 網頁**
+
+## 1. 先設定Router (必做) 
+
+### 1.1 確認網路拓樸
+- 確認在 DGX Spark 的前端，只能有唯一的一台 Router：
+  - 此 Router 直接接源頭 光纖Modem
+  - 此 Router 用 PPPoE 登入電信公司，需有 固定 Public IP (x.x.x.x)
+- 在 DGX Spark 的前端，家裡沒有其他的 Router (若有, 把其他 Router 都設在 AP Mode 當 Switch 用)
+  - 這樣 DGX Spark 無論接在哪裡，都等於接在唯一的一台 Router 後面
+- DGX Spark 的同一層與更後層的網路，可以有其他的 Router
+
+### 1.2 確認已關閉 Router VPN
+- 登入 Router
+- VPN Server / VPN Client：全部關閉
+- 不保留任何帳號、設定
+
+### 1.3 設定 Port Forward (Router)
+先找出 DGX Spark 內網IP位址
+- 登入 Router 設定主畫面，看到裝置 spark-xxxx 內網 IP 位址 (192.168.x.x) 的值，記錄起來。
+
+用 PPPoE 登入電信公司，取得事先已申請的固定 Public IP (通常在 Router 設定 `主畫面` -> `WAN` -> `WAN Setting` )
+- WAN Connection Type：選 PPPoE
+- PPPoE Setting：
+  - Address Mode = Dynamic IP
+  - User Name = 電信公司給你的固定 Public IP 登入帳號
+  - Password = 電信公司給你的固定 Public IP 登入密碼
+  - Operation Mode = Keep Alive
+- Save 存檔 
+
+
+依此設定 Port Forward (通常在 Router 設定 `主畫面` -> `WAN` -> `Port Forwarding` )
+| 欄位 | 值 |
+|------|------|
+| Rule Name | wireguard |
+| Protocal | UDP |
+| Public Port | 51820 |
+| Private Port | 51820 |
+| Private IP | DGX Spark 內網IP (填入一個 192.168.x.x 的 DGX Spark 內網IP值) |
+| Inbound Filter | Allow All |
+| 啟用 | Yes |
+
+原理說明
+- Router 將外網 `UDP:51820`
+- 轉送到 DGX Spark `UDP:51820`
+- 對應 `ListenPort = 51820`
+
+快速自我檢查
+- Port Forward 啟用
+- 無其他 VPN 佔用該 Port
+- Public / Private Port 一致
+
+---
+
+## 2. DGX Spark (Server) 確認實體網卡名稱 (非常重要)，與 安裝 WireGuard
+
+### 2.1 確認實體網卡名稱
+```
+ip link
+```
+
+記下實體網卡名稱 `(exxxxx 六碼英數字)`，例如：
+```
+exxxxx (我這台DGX Spark的實體網卡名稱範例，是6碼英數字)
+```
+- 以下指令基於此 `exxxxx` 六碼英數字的實體網卡名稱範例，設定 WineGuard Server 設定檔
+    - 若改硬體，則本篇文章的指令需跟著改
+    - 例，若加購第二台 DGX Spark，這名稱可能不同，必須重新確認。
+
+### 2.2 安裝 WireGuard VPN
+```
+sudo apt update
+sudo apt install -y wireguard
+```
+
+驗證版本（必做）
+```
+wg --version
+```
+
+---
+
+## 3. DGX Spark (Server) 建立 WireGuard 目錄與金鑰
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
