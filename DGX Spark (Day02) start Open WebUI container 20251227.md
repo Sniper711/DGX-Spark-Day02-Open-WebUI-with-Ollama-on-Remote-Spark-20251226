@@ -4,7 +4,7 @@
 # DGX Spark (Day02) start Open WebUI container 20251227
 ## 🟩 中文版
 > ## 適用情境 與 優點
-> **在 Mac/PC Client 開 Open WebUI 網頁使用AI → 但背後是 DGX Spark Server 提供算力 (以 SSH Port Forwarding 把Server運算結果推送Client)**
+> **在 Mac/PC Client 開瀏覽器操作 Open WebUI → 但背後是 DGX Spark Server 提供算力 (以 SSH Port Forwarding 把Server運算結果推送Client)**
 > 
 > - **基於 「第01天A: 外網遠端操控 指南」或「第01天B: 同子網內網操控 指南」**
 >   - 100% 連線成功率與穩定度
