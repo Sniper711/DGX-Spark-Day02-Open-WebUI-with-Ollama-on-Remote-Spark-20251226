@@ -130,11 +130,11 @@ ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 
 ---
 
-備註：解釋 Step 4-2 指令
+##備註：
 
-解釋指令
+解釋 Step 4-2 指令
 
-**docker** 用 docker 指令
+<sub><sup>**docker** 用 docker 指令</sup></sub>
 
 **run -d** 跑 containner 但別在terminal上顯示
 
