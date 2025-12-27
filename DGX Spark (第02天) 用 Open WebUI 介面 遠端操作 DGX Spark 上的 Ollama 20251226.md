@@ -60,8 +60,7 @@ docker run -d \
   - **-v ollama:/root/.ollama** 把實體 DGX Spark 的 ollama 目錄 掛載到 虛擬容器 container 的 /root/.ollama 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
   - **-v open-webui:/app/backend/data** 把實體 DGX Spark 的 open-webui 目錄 掛載到 虛擬容器 container 的 /app/backend/data 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
   - **--name open-webui** 命名容器為 open-webui
-  - **--restart unless-stopped** 預設開機後自動啟動 container。但若關機前刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container。(*註：亦可改成--restart unless-stopped. 永遠自動啟動)
-  - **--restart always** 開機後自動啟動 container (*註：亦可改成--restart unless-stopped. 若刻意下docker stop指令停止container，則下次開機後不再自動啟動 container)
+  - **--restart unless-stopped** 預設開機後自動啟動 container。但若關機前刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container。(*註：亦可改成--restart always. 永遠自動啟動)
   - **ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
 
 ### 改為 Step 4-2. 退出 Step 3 的那次暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
