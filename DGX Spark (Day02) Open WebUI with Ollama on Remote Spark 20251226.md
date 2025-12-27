@@ -13,7 +13,7 @@
 > - **小修改 DGX Spark 建立 Open WebUI 的 NVIDIA官方步驟** 
 >   - 官方步驟是基於 NVIDIA SYNC 連線的，只需小修改就能匹配 自己建立的遠端連線
 > - **SHH 一行指令登入 DGX Spark**
->   - 重開機之後，只要 Mac/PC (Client) 執行一行SHH指令，超級簡單。
+>   - 重開機之後，只要 Mac/PC (Client) 執行 `Step 4-3` 與 `Step 5`，超級簡單。
 
 ---
 
