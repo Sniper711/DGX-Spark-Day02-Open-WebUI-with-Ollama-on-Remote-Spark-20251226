@@ -8,8 +8,7 @@
 > **在 Mac/PC Client 開瀏覽器使用 Ollama 運行 Open WebUI → 實際上，是遠端的 DGX Spark Server 在提供算力**
 > 
 > - **基於前一篇文章 [第01天A: 外網遠端操控 指南](https://github.com/Sniper711/DGX-Spark-Day01A-Remote-Access-from-Internet-Guide-20251220A/blob/main/DGX%20Spark%20(%E7%AC%AC01%E5%A4%A9A)%20%E5%A4%96%E7%B6%B2%E9%81%A0%E7%AB%AF%E6%93%8D%E6%8E%A7%20%E6%8C%87%E5%8D%97%2020251220A.md) 或 [第01天B: 同子網內網操控 指南](https://github.com/Sniper711/DGX-Spark-Day01B-Local-Access-from-Same-Subnet-Guide-20251220B/blob/main/DGX%20Spark%20(%E7%AC%AC01%E5%A4%A9B)%EF%BC%9A%E5%90%8C%E5%AD%90%E7%B6%B2%E5%85%A7%E7%B6%B2%E6%93%8D%E6%8E%A7%20%E6%8C%87%E5%8D%97%2020251220B.md) 的連線方式**
->   - 100% 連線成功率與穩定度
->   - 自己掌握 Server/Client 連線的設定細節
+>   - 100% 連線成功率與穩定度，自己掌握 Server/Client 連線的設定細節
 >   - 不使用 NVIDIA SYNC 的連線方式
 > - **修改 DGX Spark 建立 Open WebUI 的 NVIDIA官方步驟** 
 >   - 官方步驟是基於 NVIDIA SYNC 連線的
