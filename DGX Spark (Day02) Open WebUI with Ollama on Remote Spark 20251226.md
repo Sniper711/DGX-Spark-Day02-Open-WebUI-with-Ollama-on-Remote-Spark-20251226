@@ -29,7 +29,7 @@
 
 ## Step 3. 打開 NVIDIA SYNC 軟體的設定畫面
 (不要做)(改成以下步驟)
-## 改為 Step 3. Mac/PC Client 暫時登入 DGX Spark Server 
+## 改為 Step 3. Mac/PC Client 暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
 在 Mac/PC Client 上執行命令
 ###### 在 Mac/PC Client 上執行命令 執行後，會**看到終端機的命令提示字元變化**，從 Mac/PC Client機的 <本機用戶>@<本機名稱>%，變成 DGX Server 機的 <server機用戶>@Spark-xxxx:$，表示已登入。
 ```
@@ -78,22 +78,58 @@ docker run -d \
 
 **ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
 
-### Step 4-2. Mac/PC Client 退出 Step 3 的那次登入 DGX Spark Server
+### Step 4-2. 退出 Step 3 的那次暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
 在 Mac/PC Client 上執行
+###### 在 Mac/PC Client 上執行命令 執行後，會**看到終端機的命令提示字元變化**，從 DGX Server 機的 <server機用戶>@Spark-xxxx:$，變成 Mac/PC Client機的 <本機用戶>@<本機名稱>%，表示已退出。
 ```
 exit
 ```
 
-### Step 4-3. Mac/PC Client 重新登入 DGX Spark Server
+### Step 4-3. Mac/PC Client 登入 DGX Spark Server (指定 Open WebUI 的通信 port number)
 在 Mac/PC Client 上執行
 ```
 ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 ```
 
+---
 
-```
-ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
-```
+## Step 5. 啟動 Open WebUI
+(步驟照做)
+
+---
+
+## Step 6. 創建管理員帳戶
+(步驟照做)
+
+---
+
+## Step 7. 下載並配置模型
+(步驟照做)
+
+---
+
+## Step 8. 測試模型
+(步驟照做)
+
+---
+
+
+## Step 9. 停止 Open WebUI
+(步驟照做)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 1.1 確認網路拓樸
 - 確認在 DGX Spark 的前端，只能有唯一的一台 Router：
