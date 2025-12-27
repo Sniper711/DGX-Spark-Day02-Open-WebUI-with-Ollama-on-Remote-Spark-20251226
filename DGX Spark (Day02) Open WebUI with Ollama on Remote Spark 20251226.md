@@ -30,7 +30,8 @@
 ## Step 3. 打開 NVIDIA SYNC 軟體的設定畫面
 (不要做)(改成以下步驟)
 ## 改為 Step 3. Mac/PC Client 登入 DGX Spark Server 
-在 Mac/PC Client 上執行
+在 Mac/PC Client 上執行命令
+執行後，會看到終端機的命令提示字元，從 Mac/PC Client機的 <本機用戶>@<本機名稱>~%，變成 DGX Server 機的 <server機用戶>@Spark-xxxx:~$，表示已登入。
 ```
 # 把 <DGX Spark username> 包含括弧刪掉, 置換成 DGX Spark 開機後登入的 username
 # 把 <192.168.x.x> 包含括弧刪掉, 置換成 DGX Spark 內網 IP 位址 (192.168.x.x) 的值
@@ -42,6 +43,7 @@ ssh <DGX Spark username>@<192.168.x.x>
 ## Step 4. 新增 Open WebUI 自訂埠配置
 (不要做)(改成以下步驟)
 ## 改為 Step 4. 新增 Open WebUI 自訂埠配置 
+### Step 4-1. 新增 Open WebUI 自訂埠配置
 在 Mac/PC Client 上執行
 ```
 docker run -d \
@@ -76,6 +78,17 @@ docker run -d \
 
 **ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
 
+### Step 4-2. Mac/PC Client 退出 Step 3 的那次登入 DGX Spark Server
+在 Mac/PC Client 上執行
+```
+exit
+```
+
+### Step 4-3. Mac/PC Client 重新登入 DGX Spark Server
+在 Mac/PC Client 上執行
+```
+ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
+```
 
 
 ```
