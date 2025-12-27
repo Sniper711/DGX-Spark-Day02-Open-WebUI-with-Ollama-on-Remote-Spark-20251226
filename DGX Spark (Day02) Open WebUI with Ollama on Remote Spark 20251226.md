@@ -13,7 +13,7 @@
 
 ---
 
-## Based on NVIDIA Steps [Open WebUI with Ollama : Set up WebUI on Remote Spark with NVIDIA Sync](https://build.nvidia.com/spark/open-webui/sync)
+## Based on NVIDIA Official Steps of [Open WebUI with Ollama : Set up WebUI on Remote Spark with NVIDIA Sync](https://build.nvidia.com/spark/open-webui/sync)
 On the page,
 ## Step 1. 配置 Docker 權限
 (步驟照做)
