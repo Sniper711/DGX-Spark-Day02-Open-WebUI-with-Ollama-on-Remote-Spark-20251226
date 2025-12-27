@@ -69,7 +69,7 @@ docker run -d \
 
 **--restart always** 開機後自動啟動 (*註：亦可改成--restart unless-stopped
 
-**ghcr.io/open-webui/open-webui:ollama** 到這裡下載 docker image
+**ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
 
 
 ### 1.1 確認網路拓樸
