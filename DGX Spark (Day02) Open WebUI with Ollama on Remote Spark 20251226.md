@@ -27,7 +27,7 @@ On this page,
 (Don't do it - follow the modified step below instead)
 ## Modified Step 3. On Mac/PC Client, temporarily login to DGX Spark Server (The port number for Open WebUI has not been assigned yet)
 On Mac/PC Client, run the following command:
-###### After executing the following command, **you will notice the terminal prompt changes** — from your <client_user>@<local_hostname>% on the Mac/PC Client to <server_user>@Spark-xxxx:$ on the DGX Spark Server. This indicates a successful login.
+###### After executing the following command, **you will notice the terminal prompt changes** — from your <client_user>@<client_Mac/PC_name>% on the Mac/PC Client to <server_user>@Spark-xxxx:$ on the DGX Spark Server. This indicates a successful login.
 ```
 # Remove `<DGX Spark username>`, and replace it with the username used to log in after DGX Spark boots
 # Remove `<192.168.x.x>`, and replace it with DGX Spark intranet IP address (192.168.x.x)
