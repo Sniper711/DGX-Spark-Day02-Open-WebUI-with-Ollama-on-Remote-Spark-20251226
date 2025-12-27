@@ -40,7 +40,7 @@ ssh <DGX Spark username>@<192.168.x.x>
 ## Step 4. 新增 Open WebUI 自訂埠配置
 (不要做)(改成以下步驟)
 ## 改為 Step 4. 新增 Open WebUI 自訂埠配置 
-### Step 4-1. 新增 Open WebUI 自訂埠配置
+### 改為 Step 4-1. 新增 Open WebUI 自訂埠配置
 在 Mac/PC Client 上執行
 ```
 docker run -d \
@@ -64,14 +64,14 @@ docker run -d \
   - **--restart always** 開機後自動啟動 container (*註：亦可改成--restart unless-stopped. 若刻意下docker stop指令停止container，則下次開機後不再自動啟動 container)
   - **ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
 
-### Step 4-2. 退出 Step 3 的那次暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
+### 改為 Step 4-2. 退出 Step 3 的那次暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
 在 Mac/PC Client 上執行
 ###### 在 Mac/PC Client 上執行命令 執行後，會**看到終端機的命令提示字元變化**，從 DGX Server 機的 <server機用戶>@Spark-xxxx:$，變成 Mac/PC Client機的 <本機用戶>@<本機名稱>%，表示已退出。
 ```
 exit
 ```
 
-### Step 4-3. Mac/PC Client 登入 DGX Spark Server (指定 Open WebUI 的通信 port number)
+### 改為 Step 4-3. Mac/PC Client 登入 DGX Spark Server (指定 Open WebUI 的通信 port number)
 在 Mac/PC Client 上執行
 
 <sub><sup>＊重開機之後，只要 Mac/PC (Client) 執行 `Step 4-3` 與 `Step 5`，超級簡單。</sup></sub>
