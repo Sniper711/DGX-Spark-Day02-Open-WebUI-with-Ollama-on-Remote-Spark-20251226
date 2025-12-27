@@ -105,7 +105,7 @@ ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 ## Step 9. 停止 Open WebUI
 (不要做)(改成以下步驟)
 ## 改為 Step 9. 停止 Open WebUI
-在 Step 4-3 的終端機機畫面按 ```Ctrl+C``` 退出
+在 Step 4-3 的終端機機畫面按 `Ctrl+C` 退出
 
 ---
 
@@ -118,27 +118,3 @@ ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 (步驟照做) (**注意：Step 11 是在 DGX Spark Server 上執行的命令**)
 
 ---
-
-##備註：
-
-解釋 Step 4-2 指令
-
-<sub><sup>**docker** 用 docker 指令</sup></sub>
-
-**run -d** 跑 containner 但別在terminal上顯示
-
-**--gpus all** 用 NVIDIA DGX Spark 的 GPU 高速運算
-
-**-p 3000:8080** 把實體 DGX Spark 的 3000 port 對應到 虛擬容器 container 的 8080 port (*註：DGX Spark 的 3000 port 這數字可以修改)
-
-**-v ollama:/root/.ollama** 把實體 DGX Spark 的 ollama 目錄 掛載到 虛擬容器 container 的 /root/.ollama 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
-
-**-v open-webui:/app/backend/data** 把實體 DGX Spark 的 open-webui 目錄 掛載到 虛擬容器 container 的 /app/backend/data 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
-
-**--name open-webui** 命名容器為 open-webui
-
-**--restart unless-stopped** 預設開機後自動啟動 container。但若關機前刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container。(*註：亦可改成--restart unless-stopped. 永遠自動啟動)
-
-**--restart always** 開機後自動啟動 container (*註：亦可改成--restart unless-stopped. 若刻意下docker stop指令停止container，則下次開機後不再自動啟動 container)
-
-**ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
