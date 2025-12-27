@@ -19,11 +19,27 @@
 
 ## 打開網頁 NVIDIA [Open WebUI with Ollama : Set up WebUI on Remote Spark with NVIDIA Sync](https://build.nvidia.com/spark/open-webui/sync)
 
-### Step 1. 配置 Docker 權限
-(步驟不變,照網頁做)
+## Step 1. 配置 Docker 權限
+(步驟不變, 照網頁做)
 
-### Step 2. 驗證 Docker 設定，並拉取容器
-(步驟不變,照網頁做)
+## Step 2. 驗證 Docker 設定，並拉取容器
+(步驟不變, 照網頁做)
+
+---
+
+## Step 3. 打開 NVIDIA SYNC 軟體的設定畫面
+(不要做)
+## 改為 Step 3. Mac/PC Client 登入 DGX Spark Server 
+在 Mac/PC Client 上
+```
+# 把 <DGX Spark username> 包含括弧刪掉, 置換成 DGX Spark 開機後登入的 username
+# 把 <192.168.x.x> 包含括弧刪掉, 置換成 DGX Spark 內網 IP 位址 (192.168.x.x) 的值
+ssh <DGX Spark username>@<192.168.x.x>
+```
+
+---
+
+## Step 4. 新增 Open WebUI 自訂埠配置
 
 ### 1.1 確認網路拓樸
 - 確認在 DGX Spark 的前端，只能有唯一的一台 Router：
