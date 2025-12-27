@@ -4,12 +4,12 @@
 > ## Scenarios & Advantages
 > **Mac/PC browser uses the Open WebUI interface → through the self-established remote connections → to run Ollama on DGX Spark Server**
 > - **This is an extension of my previous articles on the two Server/Client connection methods for DGX Spark: [Day01A: Remote Access from Internet Guide](https://github.com/Sniper711/DGX-Spark-Day01A-Remote-Access-from-Internet-Guide-20251220A/blob/main/DGX%20Spark%20(Day01A)%20Remote%20Access%20Guide%2020251220A.md) and [Day01B: Local Access from Same Subnet Guide](https://github.com/Sniper711/DGX-Spark-Day01B-Local-Access-from-Same-Subnet-Guide-20251220B/blob/main/DGX%20Spark%20(Day01B)%EF%BC%9ALocal%20Access%20from%20Same%20Subnet%20Guide%2020251220B.md). Here, I'll adapt the official NVIDIA steps (which rely on NVIDIA SYNC) for setting up Open WebUI on an NVIDIA DGX Spark, without using NVIDIA SYNC connections.**
->   - 100% 連線成功率與穩定度，自己掌握 Server/Client 連線的設定細節
->   - 不使用 NVIDIA SYNC 的連線方式
-> - **小修改 NVIDIA 官方步驟** 
->   - 官方步驟是基於 NVIDIA SYNC 連線的，只修改三個步驟就能匹配 自己建立的遠端連線
-> - **SHH 一行指令登入 DGX Spark**
->   - 重開機之後，只要 Mac/PC (Client) 執行 `Step 4-3` 與 `Step 5`，超級簡單。
+>   - Guaranteed stability through the self-estabilished remote connections
+>   - No reliance on NVIDIA SYNC
+> - **Minor modifications to the NVIDIA official steps** 
+>   - The official steps are built around NVIDIA SYNC connections; only three steps need to be changed to match the self-established remote connections.
+> - Simple one-line **SSH** command **login to DGX Spark**
+>   - After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.
 
 ---
 
