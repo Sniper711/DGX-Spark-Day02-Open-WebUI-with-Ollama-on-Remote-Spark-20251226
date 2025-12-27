@@ -19,7 +19,11 @@
 
 ## 打開網頁 NVIDIA [Open WebUI with Ollama : Set up WebUI on Remote Spark with NVIDIA Sync](https://build.nvidia.com/spark/open-webui/sync)
 
-## 1. 先設定Router (必做) 
+### Step 1. 配置 Docker 權限
+(步驟不變,照網頁做)
+
+### Step 2. 驗證 Docker 設定，並拉取容器
+(步驟不變,照網頁做)
 
 ### 1.1 確認網路拓樸
 - 確認在 DGX Spark 的前端，只能有唯一的一台 Router：
