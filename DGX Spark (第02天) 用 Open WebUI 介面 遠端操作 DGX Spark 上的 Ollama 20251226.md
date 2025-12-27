@@ -107,7 +107,9 @@ ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 ## 改為 Step 9. 停止 Open WebUI
 在 Step 4-3 的終端機機畫面按 `Ctrl+C` 退出
 
----
+*這將終止 SSH 隧道，停止本地埠轉發，並關閉對 DGX Spark 伺服器上 Open WebUI 埠的存取。
+
+--
 
 ## Step 10. 下一步
 (步驟照做)
