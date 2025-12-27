@@ -106,7 +106,9 @@ ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 ## Step 9. Stop the Open WebUI
 (Don't do it - follow the modified step below instead)
 ## Modified Step 9. Stop the Open WebUI
-在 Step 4-3 的終端機機畫面按 ```Ctrl+C``` 退出
+In the terminal window where you ran Step 4-3 (the SSH tunnel command), press `Ctrl+C` to exit.
+
+*This will terminate the SSH tunnel, stopping the local port forwarding and closing access to the Open WebUI port on the DGX Spark server.
 
 ---
 
@@ -116,6 +118,8 @@ ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 ---
 
 ## Step 11. Cleanup and rollback
-(no change) **Important: The following commands should be run directly on the DGX Spark Server (not from your Mac/PC client).**
+(no change) 
+
+**Important: The following commands should be run directly on the DGX Spark Server (not from your Mac/PC client).**
 
 ---
