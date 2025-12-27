@@ -11,8 +11,7 @@ Mac/PC browser uses the Open WebUI interface → through the self-established re
         [Day01A: Remote Access from Internet Guide] and 
         [Day01B: Local Access from Same Subnet Guide]. 
         Here, I'll adapt the official NVIDIA steps (which rely on NVIDIA SYNC) for setting up Open WebUI on an NVIDIA DGX Spark, without using NVIDIA SYNC connections.
-    Advantages
-        Guaranteed stability through the self-estabilished remote connections
+    Guaranteed stability through the self-estabilished remote connections
         No reliance on NVIDIA SYNC
     Minor modifications to the NVIDIA official steps
         The official steps are built around NVIDIA SYNC connections; only three steps need to be changed to match the self-established remote connections.
