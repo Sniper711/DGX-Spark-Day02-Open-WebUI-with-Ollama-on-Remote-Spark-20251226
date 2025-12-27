@@ -36,9 +36,9 @@ ssh <DGX Spark username>@<192.168.x.x>
 
 ---
 
-## Step 4. 新增 Open WebUI 自訂埠配置
-(不要做)(改成以下步驟)
-## 改為 Step 4. 新增 Open WebUI 自訂埠配置 
+## Step 4. Add Open WebUI custom port configuration
+(Don't do it - follow the modified step below instead)
+## Modified Step 4. 新增 Open WebUI 自訂埠配置 
 ### Step 4-1. 新增 Open WebUI 自訂埠配置
 在 Mac/PC Client 上執行
 ```
