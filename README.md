@@ -11,13 +11,11 @@ Mac/PC browser uses the Open WebUI interface → through the self-established re
         [Day01A: Remote Access from Internet Guide] and 
         [Day01B: Local Access from Same Subnet Guide]. 
         Here, I'll adapt the official NVIDIA steps (which rely on NVIDIA SYNC) for setting up Open WebUI on an NVIDIA DGX Spark, without using NVIDIA SYNC connections.
+    Advantages
         Guaranteed stability through the self-estabilished remote connections
         No reliance on NVIDIA SYNC
     Minor modifications to the NVIDIA official steps
         The official steps are built around NVIDIA SYNC connections; only three steps need to be changed to match the self-established remote connections.
-    Use a low-end Router
-        Router: must have a fixed Public IP (x.x.x.x) and support Port Forwarding.
-        Since Tunnelblick and OpenVPN are not used, the Router does not need advanced VPN features (if available, disable them), just a cheap Router is sufficient.
     Simple one-line SSH command login to DGX Spark
         After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.
 .....
