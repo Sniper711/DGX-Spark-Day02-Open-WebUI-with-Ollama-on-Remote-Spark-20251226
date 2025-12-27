@@ -9,7 +9,7 @@
 >   - 100% 連線成功率與穩定度，自己掌握 Server/Client 連線的設定細節
 >   - 不使用 NVIDIA SYNC 的連線方式
 > - **小修改 DGX Spark 建立 Open WebUI 的 NVIDIA官方步驟** 
->   - 官方步驟是基於 NVIDIA SYNC 連線的，只需小修改三個步驟 就能 
+>   - 官方步驟是基於 NVIDIA SYNC 連線的，只修改三個步驟 就能匹配 自己建立的遠端連線
 > - **SHH 一行指令登入 DGX Spark**
 >   - 重開機之後，只要 Mac/PC (Client) 執行 `Step 4-3` 與 `Step 5`，超級簡單。
 
