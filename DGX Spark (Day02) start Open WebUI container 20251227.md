@@ -3,8 +3,9 @@
 <sub><sup>This is an extension of my previous article on the two Server/Client connection methods for DGX Spark: [Day01A: Remote Access from Internet Guide](https://github.com/Sniper711/DGX-Spark-Day01A-Remote-Access-from-Internet-Guide-20251220A/blob/main/DGX%20Spark%20(Day01A)%20Remote%20Access%20Guide%2020251220A.md) and [Day01B: Local Access from Same Subnet Guide](https://github.com/Sniper711/DGX-Spark-Day01B-Local-Access-from-Same-Subnet-Guide-20251220B/blob/main/DGX%20Spark%20(Day01B)%EF%BC%9ALocal%20Access%20from%20Same%20Subnet%20Guide%2020251220B.md). Here, I'll adapt the official NVIDIA steps (which rely on NVIDIA SYNC) for setting up Open WebUI on an NVIDIA DGX Spark, without using NVIDIA SYNC connections. I hope this gives you more options for reference.</sup></sub>
 # DGX Spark (Day02) start Open WebUI container 20251227
 ## 🟩 中文版
-## 適用情境 與 優點
-> <sub><sup>**這是我前一篇文章 DGX Spark : [第01天A: 外網遠端操控 指南](https://github.com/Sniper711/DGX-Spark-Day01A-Remote-Access-from-Internet-Guide-20251220A/blob/main/DGX%20Spark%20(%E7%AC%AC01%E5%A4%A9A)%20%E5%A4%96%E7%B6%B2%E9%81%A0%E7%AB%AF%E6%93%8D%E6%8E%A7%20%E6%8C%87%E5%8D%97%2020251220A.md) 與 [第01天B: 同子網內網操控 指南](https://github.com/Sniper711/DGX-Spark-Day01B-Local-Access-from-Same-Subnet-Guide-20251220B/blob/main/DGX%20Spark%20(%E7%AC%AC01%E5%A4%A9B)%EF%BC%9A%E5%90%8C%E5%AD%90%E7%B6%B2%E5%85%A7%E7%B6%B2%E6%93%8D%E6%8E%A7%20%E6%8C%87%E5%8D%97%2020251220B.md) 兩種 Server/Client 連線方式的延伸文章。以下，我將在不使用 NVIDIA SYNC 做連線的前提，修改 DGX Spark 建立 Open WebUI 的 NVIDIA官方步驟 (官方步驟是基於 NVIDIA SYNC 連線的)。希望能給你更多方式參考。**</sup></sub>
+> ## 適用情境 與 優點
+> **在 Mac/PC Client → 透過 WireGuard VPN → SSH 登入家中 DGX Spark**
+> **在 Mac/PC Client 開 Open WebUI 網頁使用AI → 但背後是 DGX Spark Server 提供算力 (以 SSH Port Forwarding 把Server運算結果推送Client)**
 > 
 > - **基於 「第01天A: 外網遠端操控 指南」或「第01天B: 同子網內網操控 指南」**
 >   - 100% 連線成功率與穩定度
@@ -14,8 +15,6 @@
 >   - 官方步驟是基於 NVIDIA SYNC 連線的.
 > - **SHH 一行指令登入 DGX Spark**
 >   - 重開機之後，只要 Mac/PC (Client) 執行一行SHH指令，超級簡單。
-
-本文件說明在 **DGX Spark（Linux）** 上部署並日常使用 **Open WebUI（Docker）**，以及在 **Mac** 端透過 **SSH port forwarding** 存取 WebUI 的標準流程。本 SOP 已避開 NVIDIA Sync 的不穩定 App Proxy，採用工程上最穩定、可預期的做法。
 
 ---
 
