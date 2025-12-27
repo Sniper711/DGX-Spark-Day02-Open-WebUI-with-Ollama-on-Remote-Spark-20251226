@@ -7,7 +7,7 @@
 
 Mac/PC browser uses the Open WebUI interface → through the self-established remote connections → to run Ollama on DGX Spark Server
 
-    Based on the interconnection methods of DGX Spark: Day01A: Remote Access from Internet Guide and Day01B: Local Access from Same Subnet Guide. 
+    Based on the interconnection methods of article (Day01A): Remote Access from Internet Guide and (Day01B): Local Access from Same Subnet Guide. 
         Guaranteed stability through the self-estabilished remote connections
         No reliance on NVIDIA SYNC
     Minor modifications to the NVIDIA official steps
