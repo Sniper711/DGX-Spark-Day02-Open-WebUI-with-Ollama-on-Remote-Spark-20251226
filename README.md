@@ -13,20 +13,6 @@
 > - Simple one-line **SSH** command **login to DGX Spark**
 >   - After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.
 
-Mac/PC browser uses the Open WebUI interface → through the self-established remote connections → to run Ollama on DGX Spark Server
-
-    Based on the interconnection methods of article (Day01A): Remote Access from Internet Guide and (Day01B): Local Access from Same Subnet Guide. 
-        Guaranteed stability through the self-estabilished remote connections
-        No reliance on NVIDIA SYNC
-    Minor modifications to the NVIDIA official steps
-        The official steps are built around NVIDIA SYNC connections; only three steps need to be changed to match the self-established remote connections.
-    Simple one-line SSH command login to DGX Spark
-        After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.
-.....
-
-.....
-
-Congratulations — your Mac/PC can now reach your DGX Spark from anywhere.
         
 
 ## 適用情境 與 優點
