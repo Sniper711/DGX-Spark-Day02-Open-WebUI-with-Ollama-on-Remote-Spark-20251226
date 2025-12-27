@@ -72,6 +72,11 @@ docker run -d \
 **ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
 
 
+
+```
+ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
+```
+
 ### 1.1 確認網路拓樸
 - 確認在 DGX Spark 的前端，只能有唯一的一台 Router：
   - 此 Router 直接接源頭 光纖Modem
