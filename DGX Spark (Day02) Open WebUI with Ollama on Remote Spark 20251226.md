@@ -67,7 +67,7 @@ docker run -d \
 
 **--name open-webui** 命名容器為 open-webui
 
-**--restart always** 開機後自動啟動 (*註：亦可改成--restart unless-stopped
+**--restart always** 開機後自動啟動 (*註：亦可改成--restart unless-stopped, 若刻意停止container則下次開機不會自動啟動)
 
 **ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
 
