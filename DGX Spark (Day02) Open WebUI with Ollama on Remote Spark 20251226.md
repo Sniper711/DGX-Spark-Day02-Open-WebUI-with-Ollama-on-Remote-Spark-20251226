@@ -52,17 +52,17 @@ docker run -d \
   ghcr.io/open-webui/open-webui:ollama
 ```
 - Command explainations
-  - **docker** use docker command
-  - **run -d** run containner in detached mode, no display on terminal
-  - **--gpus all** utilize the GPU-accelerated compution of NVIDIA DGX Spark
-  - **-p 3000:8080** 把實體 DGX Spark 的 3000 port 對應到 虛擬容器 container 的 8080 port (*註：DGX Spark 的 3000 port 這數字可以修改)
+  - **docker** Docker command
+  - **run -d** Run the container in detached mode (in the background, without showing logs in the terminal).
+  - **--gpus all** Grant the container access to all NVIDIA GPUs on the DGX Spark host.
+  - **-p 3000:8080** Publish (map) port 8080 inside the container to port 3000 on the DGX Spark host.
+(*Note: The 3000 port on DGX Spark can be changed.)
   - **-v ollama:/root/.ollama** Mount the Docker named volume `ollama` stored on the DGX Spark host (typically under /var/lib/docker/volumes/ollama/_data) to `/root/.ollama` inside the container.
-  - **-v open-webui:/app/backend/data** Mount the Docker named volume `open-webui` stored on the DGX Spark host (typically under /var/lib/docker/volumes/ollama/_data) to `/app/backend/data` inside the container.
-  把實體 DGX Spark 的 open-webui 目錄 掛載到 虛擬容器 container 的 /app/backend/data 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
-  - **--name open-webui** 命名容器為 open-webui
-  - **--restart unless-stopped** 預設開機後自動啟動 container。但若關機前刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container。(*註：亦可改成--restart unless-stopped. 永遠自動啟動)
-  - **--restart always** 開機後自動啟動 container (*註：亦可改成--restart unless-stopped. 若刻意下docker stop指令停止container，則下次開機後不再自動啟動 container)
-  - **ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
+  - **-v open-webui:/app/backend/data** Mount the Docker named volume `open-webui` stored on the DGX Spark host (typically under /var/lib/docker/volumes/open-webui/_data) to `/app/backend/data` inside the container.
+  - **--name open-webui** Name the container open-webui.
+  - **--restart unless-stopped** Automatically restart the container on system boot (or after crashes), unless it was explicitly stopped with docker stop.
+(*Note: Can be changed to --restart always to always restart regardless of how it was stopped.)
+  - **ghcr.io/open-webui/open-webui:ollama** Use the Docker image ghcr.io/open-webui/open-webui:ollama to create the container.
 
 ### Step 4-2. 退出 Step 3 的那次暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
 在 Mac/PC Client 上執行
