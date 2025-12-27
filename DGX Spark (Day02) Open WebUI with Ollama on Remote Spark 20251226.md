@@ -50,7 +50,7 @@ docker run -d \
   -v ollama:/root/.ollama \
   -v open-webui:/app/backend/data \
   --name open-webui \
-  --restart always \
+  --restart unless-stopped \
   ghcr.io/open-webui/open-webui:ollama
 ```
 **docker** 用 docker 指令
