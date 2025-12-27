@@ -71,10 +71,10 @@ docker run -d \
 exit
 ```
 
-### Step 4-3. Mac/PC Client 登入 DGX Spark Server (指定 Open WebUI 的通信 port number)
-在 Mac/PC Client 上執行
+### Step 4-3. On Mac/PC Client, re-login to DGX Spark Server (this time specifying the Open WebUI communication port)
+On Mac/PC Client, run the following command:
 
-<sub><sup>＊重開機之後，只要 Mac/PC (Client) 執行 `Step 4-3` 與 `Step 5`，超級簡單。</sup></sub>
+<sub><sup>＊After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.</sup></sub>
 ```
 ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 ```
