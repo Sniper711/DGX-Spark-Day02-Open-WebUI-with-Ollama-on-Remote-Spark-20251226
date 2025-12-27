@@ -7,24 +7,19 @@
 
 Mac/PC browser uses the Open WebUI interface → through the self-established remote connections → to run Ollama on DGX Spark Server
 
-    Use WireGuard VPN
-    This is an extension of my previous articles on the two Server/Client connection methods for DGX Spark: [Day01A: Remote Access from Internet Guide] and [Day01B: Local Access from Same Subnet Guide]. Here, I'll adapt the official NVIDIA steps (which rely on NVIDIA SYNC) for setting up Open WebUI on an NVIDIA DGX Spark, without using NVIDIA SYNC connections.
-        Use DGX Spark as VPN Server. (Mac/PC = Client)
-        The VPN penetration rate is extremely high, and using a mobile hotspot is rarely blocked by carriers.
-        Configuring WireGuard with UDP port 51820 along with keepalive is the right move.
-        90% of mobile networks in Taiwan allow WireGuard, but OpenVPN does not.
-    Do not use Tunnelblick / OpenVPN, no need for an expensive router's built-in VPN.
-        Reason 1 for VPN connection failure when using mobile hotspots: carrier intentionally block mobile network UDP/TCP 1194 Ports VPN traffic.
-            Using TCP port 443 can enhance VPN penetration rates, which is relatively stable but slower, and may cause TCP-over-TCP head-of-line blocking leading to meltdown issues on mobile networks.
-            Some expensive routers cannot change TCP port# which is also a problem (only TCP port 1194 is available).
-        Reason 2 for VPN connection failure when using mobile hotspots: mobile network NAT causes UDP packet loss.
-            Although Tunnelblick and OpenVPN use UDP, their internal implementation is similar to TCP and SSL/TLS, with many steps, making it prone to disconnections on mobile networks.
-        Therefore, there is no need for Tunnelblick and OpenVPN
+    This is an extension of my previous articles on the two Server/Client connection methods for DGX Spark: 
+        [Day01A: Remote Access from Internet Guide] and 
+        [Day01B: Local Access from Same Subnet Guide]. 
+        Here, I'll adapt the official NVIDIA steps (which rely on NVIDIA SYNC) for setting up Open WebUI on an NVIDIA DGX Spark, without using NVIDIA SYNC connections.
+        Guaranteed stability through the self-estabilished remote connections
+        No reliance on NVIDIA SYNC
+    Minor modifications to the NVIDIA official steps
+        The official steps are built around NVIDIA SYNC connections; only three steps need to be changed to match the self-established remote connections.
     Use a low-end Router
         Router: must have a fixed Public IP (x.x.x.x) and support Port Forwarding.
         Since Tunnelblick and OpenVPN are not used, the Router does not need advanced VPN features (if available, disable them), just a cheap Router is sufficient.
     Simple one-line SSH command login to DGX Spark
-        After rebooting, simply have the Mac/PC Client run this SHH command in step 9.1 - it's super easy.
+        After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.
 .....
 
 .....
