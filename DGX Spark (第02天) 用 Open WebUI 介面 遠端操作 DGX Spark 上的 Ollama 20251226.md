@@ -28,7 +28,7 @@
 (不要做)(改成以下步驟)
 ## 改為 Step 3. Mac/PC Client 暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
 在 Mac/PC Client 上執行命令
-###### 在 Mac/PC Client 上執行命令 執行後，會**看到終端機的命令提示字元變化**，從 Mac/PC Client機的 <本機用戶>@<本機名稱>%，變成 DGX Server 機的 <server機用戶>@Spark-xxxx:$，表示已登入。
+###### 執行命令後，會看到終端機的命令提示字元變化，從 Mac/PC Client機的 <本機用戶>@<本機名稱>%，變成 DGX Server 機的 <server機用戶>@Spark-xxxx:$，表示已登入。
 ```
 # 把 <DGX Spark username> 包含括弧刪掉, 置換成 DGX Spark 開機後登入的 username
 # 把 <192.168.x.x> 包含括弧刪掉, 置換成 DGX Spark 內網 IP 位址 (192.168.x.x) 的值
