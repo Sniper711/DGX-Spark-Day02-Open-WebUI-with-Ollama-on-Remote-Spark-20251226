@@ -38,9 +38,9 @@ ssh <DGX Spark username>@<192.168.x.x>
 
 ## Step 4. Add Open WebUI custom port configuration
 (Don't do it - follow the modified step below instead)
-## Modified Step 4. 新增 Open WebUI 自訂埠配置 
-### Step 4-1. 新增 Open WebUI 自訂埠配置
-在 Mac/PC Client 上執行
+## Modified Step 4. Add Open WebUI custom port configuration 
+### Step 4-1. Add Open WebUI custom port configuration
+On Mac/PC Client, run the following command:
 ```
 docker run -d \
   --gpus all \
@@ -51,13 +51,14 @@ docker run -d \
   --restart unless-stopped \
   ghcr.io/open-webui/open-webui:ollama
 ```
-- 解釋指令
-  - **docker** 用 docker 指令
-  - **run -d** 跑 containner 但別在terminal上顯示
-  - **--gpus all** 用 NVIDIA DGX Spark 的 GPU 高速運算
+- Command explainations
+  - **docker** use docker command
+  - **run -d** run containner in detached mode, no display on terminal
+  - **--gpus all** utilize the GPU-accelerated compution of NVIDIA DGX Spark
   - **-p 3000:8080** 把實體 DGX Spark 的 3000 port 對應到 虛擬容器 container 的 8080 port (*註：DGX Spark 的 3000 port 這數字可以修改)
-  - **-v ollama:/root/.ollama** 把實體 DGX Spark 的 ollama 目錄 掛載到 虛擬容器 container 的 /root/.ollama 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
-  - **-v open-webui:/app/backend/data** 把實體 DGX Spark 的 open-webui 目錄 掛載到 虛擬容器 container 的 /app/backend/data 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
+  - **-v ollama:/root/.ollama** Mount the Docker named volume `ollama` stored on the DGX Spark host (typically under /var/lib/docker/volumes/ollama/_data) to `/root/.ollama` inside the container.
+  - **-v open-webui:/app/backend/data** Mount the Docker named volume `open-webui` stored on the DGX Spark host (typically under /var/lib/docker/volumes/ollama/_data) to `/app/backend/data` inside the container.
+  把實體 DGX Spark 的 open-webui 目錄 掛載到 虛擬容器 container 的 /app/backend/data 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
   - **--name open-webui** 命名容器為 open-webui
   - **--restart unless-stopped** 預設開機後自動啟動 container。但若關機前刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container。(*註：亦可改成--restart unless-stopped. 永遠自動啟動)
   - **--restart always** 開機後自動啟動 container (*註：亦可改成--restart unless-stopped. 若刻意下docker stop指令停止container，則下次開機後不再自動啟動 container)
