@@ -53,11 +53,23 @@ docker run -d \
   --restart always \
   ghcr.io/open-webui/open-webui:ollama
 ```
-docker 用 docker 指令
-run -d 跑 containner 但別在terminal上顯示
---gpus all 用 NVIDIA DGX Spark 的 GPU 高速運算
--p 3000:8080 把虛擬 container 內部的 8080 port, 對應到實體 DGX Spark 外部的 3000 port (*註：3000這數字能改成其他的 port number)
+**docker** 用 docker 指令
 
+**run -d** 跑 containner 但別在terminal上顯示
+
+**--gpus all** 用 NVIDIA DGX Spark 的 GPU 高速運算
+
+**-p 3000:8080** 把實體 DGX Spark 的 3000 port 對應到 虛擬容器 container 的 8080 port (*註：DGX Spark 的 3000 port 這數字可以修改)
+
+**-v ollama:/root/.ollama** 把實體 DGX Spark 的 ollama 目錄 掛載到 虛擬容器 container 的 /root/.ollama 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
+
+**-v open-webui:/app/backend/data** 把實體 DGX Spark 的 open-webui 目錄 掛載到 虛擬容器 container 的 /app/backend/data 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
+
+**--name open-webui** 命名容器為 open-webui
+
+**--restart always** 開機後自動啟動 (*註：亦可改成--restart unless-stopped
+
+**ghcr.io/open-webui/open-webui:ollama** 到這裡下載 docker image
 
 
 ### 1.1 確認網路拓樸
