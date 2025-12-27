@@ -14,23 +14,23 @@
 ---
 
 ## Based on NVIDIA Official Steps of [Open WebUI with Ollama : Set up WebUI on Remote Spark with NVIDIA Sync](https://build.nvidia.com/spark/open-webui/sync)
-On the page,
-## Step 1. 配置 Docker 權限
-(步驟照做)
+On this page,
+## Step 1. Configure Docker permissions
+(no change)
 
-## Step 2. 驗證 Docker 設定，並拉取容器
-(步驟照做)
+## Step 2. Verify Docker setup and pull container
+(no change)
 
 ---
 
-## Step 3. 打開 NVIDIA SYNC 軟體的設定畫面
-(不要做)(改成以下步驟)
-## 改為 Step 3. Mac/PC Client 暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
-在 Mac/PC Client 上執行命令
-###### 在 Mac/PC Client 上執行命令 執行後，會**看到終端機的命令提示字元變化**，從 Mac/PC Client機的 <本機用戶>@<本機名稱>%，變成 DGX Server 機的 <server機用戶>@Spark-xxxx:$，表示已登入。
+## Step 3. Open NVIDIA SYNC Settings
+(Don't do it - follow the modified step below instead)
+## Modified Step 3. On Mac/PC Client, temporarily login to DGX Spark Server (The port number for Open WebUI has not been assigned yet)
+On Mac/PC Client, run the following command:
+###### After executing the following command, **you will notice the terminal prompt changes** — from your <client-user>@<local-hostname>% on the Mac/PC Client to <server-user>@Spark-xxxx:$ on the DGX Spark Server. This indicates a successful login.
 ```
-# 把 <DGX Spark username> 包含括弧刪掉, 置換成 DGX Spark 開機後登入的 username
-# 把 <192.168.x.x> 包含括弧刪掉, 置換成 DGX Spark 內網 IP 位址 (192.168.x.x) 的值
+# Remove `<DGX Spark username>`, and replace it with the username used to log in after DGX Spark boots
+# Remove `<192.168.x.x>`, and replace it with DGX Spark intranet IP address (192.168.x.x)
 ssh <DGX Spark username>@<192.168.x.x>
 ```
 
