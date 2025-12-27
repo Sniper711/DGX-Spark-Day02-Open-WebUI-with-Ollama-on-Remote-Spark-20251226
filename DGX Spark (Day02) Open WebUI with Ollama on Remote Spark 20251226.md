@@ -17,7 +17,7 @@
 
 ---
 
-##打開 NVIDIA [Open WebUI with Ollama : Set up WebUI on Remote Spark with NVIDIA Sync](https://build.nvidia.com/spark/open-webui/sync) 網頁
+## 打開網頁 NVIDIA [Open WebUI with Ollama : Set up WebUI on Remote Spark with NVIDIA Sync](https://build.nvidia.com/spark/open-webui/sync)
 
 ## 1. 先設定Router (必做) 
 
