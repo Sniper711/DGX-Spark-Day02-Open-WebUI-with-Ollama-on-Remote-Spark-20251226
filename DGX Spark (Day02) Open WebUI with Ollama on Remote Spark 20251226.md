@@ -66,7 +66,7 @@ docker run -d \
 
 ### Modified Step 4-2. On Mac/PC Client, log out from the temporary DGX Spark Server session established in Step 3 (no Open WebUI communication port was specified yet)
 On Mac/PC Client, run the following command:
-###### 在 Mac/PC Client 上執行命令 執行後，會**看到終端機的命令提示字元變化**，從 DGX Server 機的 <server機用戶>@Spark-xxxx:$，變成 Mac/PC Client機的 <本機用戶>@<本機名稱>%，表示已退出。
+###### After executing the command, you will notice the terminal prompt changes — from the DGX Spark Server's format (e.g., <server-user>@Spark-xxxx:$) back to your local Mac/PC Client's prompt (e.g., <local-user>@<local-machine>%). This indicates a successful logout.
 ```
 exit
 ```
@@ -81,65 +81,41 @@ ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 
 ---
 
-## Step 5. 啟動 Open WebUI
-(步驟照做)
+## Step 5. Launch Open WebUI
+(no change)
 
 <sub><sup>＊After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.</sup></sub>
 
 ---
 
-## Step 6. 創建管理員帳戶
-(步驟照做)
+## Step 6. Create administrator account
+(no change)
 
 ---
 
-## Step 7. 下載並配置模型
-(步驟照做)
+## Step 7. Download and configure a model
+(no change)
 
 ---
 
-## Step 8. 測試模型
-(步驟照做)
+## Step 8. Test the model
+(no change)
 
 ---
 
-## Step 9. 停止 Open WebUI
-(不要做)(改成以下步驟)
-## 改為 Step 9. 停止 Open WebUI
+## Step 9. Stop the Open WebUI
+(Don't do it - follow the modified step below instead)
+## Modified Step 9. Stop the Open WebUI
 在 Step 4-3 的終端機機畫面按 ```Ctrl+C``` 退出
 
 ---
 
-## Step 10. 下一步
-(步驟照做)
+## Step 10. Next steps
+(no change)
 
 ---
 
-## Step 11. 清除與還原
-(步驟照做) (**注意：Step 11 是在 DGX Spark Server 上執行的命令**)
+## Step 11. Cleanup and rollback
+(no change) **Important: The following commands should be run directly on the DGX Spark Server (not from your Mac/PC client).**
 
 ---
-
-##備註：
-
-解釋 Step 4-2 指令
-
-<sub><sup>**docker** 用 docker 指令</sup></sub>
-
-**run -d** 跑 containner 但別在terminal上顯示
-
-**--gpus all** 用 NVIDIA DGX Spark 的 GPU 高速運算
-
-**-p 3000:8080** 把實體 DGX Spark 的 3000 port 對應到 虛擬容器 container 的 8080 port (*註：DGX Spark 的 3000 port 這數字可以修改)
-
-**-v ollama:/root/.ollama** 把實體 DGX Spark 的 ollama 目錄 掛載到 虛擬容器 container 的 /root/.ollama 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
-
-**-v open-webui:/app/backend/data** 把實體 DGX Spark 的 open-webui 目錄 掛載到 虛擬容器 container 的 /app/backend/data 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
-
-**--name open-webui** 命名容器為 open-webui
-
-**--restart unless-stopped** 預設開機後自動啟動 container。但若關機前刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container。(*註：亦可改成--restart unless-stopped. 永遠自動啟動)
-
-**--restart always** 開機後自動啟動 container (*註：亦可改成--restart unless-stopped. 若刻意下docker stop指令停止container，則下次開機後不再自動啟動 container)
-
-**ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
