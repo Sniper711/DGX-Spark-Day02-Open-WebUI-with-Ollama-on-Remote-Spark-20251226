@@ -67,7 +67,7 @@ docker run -d \
 
 **--name open-webui** 命名容器為 open-webui
 
-**--restart unless-stopped** 預設開機後自動啟動 container。但若上次刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container (*註：亦可改成--restart unless-stopped. 永遠自動啟動)
+**--restart unless-stopped** 預設開機後自動啟動 container。但若關機前刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container。(*註：亦可改成--restart unless-stopped. 永遠自動啟動)
 
 **--restart always** 開機後自動啟動 container (*註：亦可改成--restart unless-stopped. 若刻意下docker stop指令停止container，則下次開機後不再自動啟動 container)
 
