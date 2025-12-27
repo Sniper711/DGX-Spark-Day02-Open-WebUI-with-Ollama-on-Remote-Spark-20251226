@@ -55,18 +55,17 @@ docker run -d \
   --restart unless-stopped \
   ghcr.io/open-webui/open-webui:ollama
 ```
-
-解釋指令
+- 解釋指令
   - **docker** 用 docker 指令
   - **run -d** 跑 containner 但別在terminal上顯示
   - **--gpus all** 用 NVIDIA DGX Spark 的 GPU 高速運算
-- **-p 3000:8080** 把實體 DGX Spark 的 3000 port 對應到 虛擬容器 container 的 8080 port (*註：DGX Spark 的 3000 port 這數字可以修改)
-- **-v ollama:/root/.ollama** 把實體 DGX Spark 的 ollama 目錄 掛載到 虛擬容器 container 的 /root/.ollama 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
-- **-v open-webui:/app/backend/data** 把實體 DGX Spark 的 open-webui 目錄 掛載到 虛擬容器 container 的 /app/backend/data 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
-- **--name open-webui** 命名容器為 open-webui
-- **--restart unless-stopped** 預設開機後自動啟動 container。但若關機前刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container。(*註：亦可改成--restart unless-stopped. 永遠自動啟動)
-- **--restart always** 開機後自動啟動 container (*註：亦可改成--restart unless-stopped. 若刻意下docker stop指令停止container，則下次開機後不再自動啟動 container)
-- **ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
+  - **-p 3000:8080** 把實體 DGX Spark 的 3000 port 對應到 虛擬容器 container 的 8080 port (*註：DGX Spark 的 3000 port 這數字可以修改)
+  - **-v ollama:/root/.ollama** 把實體 DGX Spark 的 ollama 目錄 掛載到 虛擬容器 container 的 /root/.ollama 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
+  - **-v open-webui:/app/backend/data** 把實體 DGX Spark 的 open-webui 目錄 掛載到 虛擬容器 container 的 /app/backend/data 目錄 (*註：實體 DGX Spark 目錄通常在 /var/lib/docker/volumes/...之下)
+  - **--name open-webui** 命名容器為 open-webui
+  - **--restart unless-stopped** 預設開機後自動啟動 container。但若關機前刻意下 docker stop 指令停止 container，則下次開機後不再自動啟動 container。(*註：亦可改成--restart unless-stopped. 永遠自動啟動)
+  - **--restart always** 開機後自動啟動 container (*註：亦可改成--restart unless-stopped. 若刻意下docker stop指令停止container，則下次開機後不再自動啟動 container)
+  - **ghcr.io/open-webui/open-webui:ollama** 用這個預先下載的 docker image，來做容器 container
 
 ### Step 4-2. 退出 Step 3 的那次暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
 在 Mac/PC Client 上執行
