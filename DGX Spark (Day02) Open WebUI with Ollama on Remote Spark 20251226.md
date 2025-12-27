@@ -18,7 +18,7 @@
 ---
 
 ## 打開網頁 NVIDIA [Open WebUI with Ollama : Set up WebUI on Remote Spark with NVIDIA Sync](https://build.nvidia.com/spark/open-webui/sync)
-
+網頁中
 ## Step 1. 配置 Docker 權限
 (步驟不變, 照網頁做)
 
