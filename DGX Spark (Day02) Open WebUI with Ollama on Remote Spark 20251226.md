@@ -5,7 +5,7 @@
 # DGX Spark (Day02) Open WebUI with Ollama on Remote Spark 20251226
 ## 🟩 中文版
 > ## 適用情境 與 優點
-> **Mac/PC Client 開瀏覽器使用 Ollama 運行 Open WebUI → 透過自己建立的遠端連線 → 讓遠端的 DGX Spark Server 提供算力**
+> **Mac/PC Client 開瀏覽器使用 Ollama 運行 Open WebUI → 透過自己建立的遠端連線 → 讓遠端的 DGX Spark Server 提供高速運算算力**
 > 
 > - **基於前一篇文章 [第01天A: 外網遠端操控 指南](https://github.com/Sniper711/DGX-Spark-Day01A-Remote-Access-from-Internet-Guide-20251220A/blob/main/DGX%20Spark%20(%E7%AC%AC01%E5%A4%A9A)%20%E5%A4%96%E7%B6%B2%E9%81%A0%E7%AB%AF%E6%93%8D%E6%8E%A7%20%E6%8C%87%E5%8D%97%2020251220A.md) 或 [第01天B: 同子網內網操控 指南](https://github.com/Sniper711/DGX-Spark-Day01B-Local-Access-from-Same-Subnet-Guide-20251220B/blob/main/DGX%20Spark%20(%E7%AC%AC01%E5%A4%A9B)%EF%BC%9A%E5%90%8C%E5%AD%90%E7%B6%B2%E5%85%A7%E7%B6%B2%E6%93%8D%E6%8E%A7%20%E6%8C%87%E5%8D%97%2020251220B.md) 的連線方式**
 >   - 100% 連線成功率與穩定度，自己掌握 Server/Client 連線的設定細節
@@ -30,7 +30,7 @@
 ## Step 3. 打開 NVIDIA SYNC 軟體的設定畫面
 (不要做)
 ## 改為 Step 3. Mac/PC Client 登入 DGX Spark Server 
-在 Mac/PC Client 上
+在 Mac/PC Client 上執行
 ```
 # 把 <DGX Spark username> 包含括弧刪掉, 置換成 DGX Spark 開機後登入的 username
 # 把 <192.168.x.x> 包含括弧刪掉, 置換成 DGX Spark 內網 IP 位址 (192.168.x.x) 的值
@@ -40,6 +40,25 @@ ssh <DGX Spark username>@<192.168.x.x>
 ---
 
 ## Step 4. 新增 Open WebUI 自訂埠配置
+(不要做)
+## 改為 Step 4. 新增 Open WebUI 自訂埠配置 
+在 Mac/PC Client 上執行
+```
+docker run -d \
+  --gpus all \
+  -p 3000:8080 \
+  -v ollama:/root/.ollama \
+  -v open-webui:/app/backend/data \
+  --name open-webui \
+  --restart always \
+  ghcr.io/open-webui/open-webui:ollama
+```
+docker 用 docker 指令
+run -d 跑 containner 但別在terminal上顯示
+--gpus all 用 NVIDIA DGX Spark 的 GPU 高速運算
+-p 3000:8080 把虛擬 container 內部的 8080 port, 對應到實體 DGX Spark 外部的 3000 port (*註：3000這數字能改成其他的 port number)
+
+
 
 ### 1.1 確認網路拓樸
 - 確認在 DGX Spark 的前端，只能有唯一的一台 Router：
