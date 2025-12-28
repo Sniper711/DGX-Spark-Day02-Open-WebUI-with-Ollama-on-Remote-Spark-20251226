@@ -2,7 +2,7 @@
 # DGX Spark (Day02) Open WebUI with Ollama on Remote Spark 20251226
 ## 🟩 English
 > ## Scenarios & Advantages
-> **Mac/PC browser uses the Open WebUI interface → through the self-established remote connections → to run Ollama on DGX Spark Server**
+> **Mac/PC Client browser uses the Open WebUI interface → through the self-established remote connections → to run Ollama on DGX Spark Server**
 > - **Based on the interconnection methods of DGX Spark: [Day01A: Remote Access from Internet Guide](https://github.com/Sniper711/DGX-Spark-Day01A-Remote-Access-from-Internet-Guide-20251220A/blob/main/DGX%20Spark%20(Day01A)%20Remote%20Access%20from%20Internet%20Guide%2020251220A.md) and [Day01B: Local Access from Same Subnet Guide](https://github.com/Sniper711/DGX-Spark-Day01B-Local-Access-from-Same-Subnet-Guide-20251220B/blob/main/DGX%20Spark%20(Day01B)%EF%BC%9ALocal%20Access%20from%20Same%20Subnet%20Guide%2020251220B.md)**. 
 >   - Guaranteed stability through the self-estabilished remote connections
 >   - No reliance on NVIDIA SYNC
