@@ -123,3 +123,8 @@ In the terminal window where you ran Step 4-3 (the SSH tunnel command), press `C
 **Important: The following commands should be run directly on the DGX Spark Server (not from your Mac/PC client).**
 
 ---
+
+# Congratulations - Now you can run Ollama via your Mac/PC browser — powered by DGX Spark's GPU!
+<sub><sup>* After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.</sup></sub>
+
+---
