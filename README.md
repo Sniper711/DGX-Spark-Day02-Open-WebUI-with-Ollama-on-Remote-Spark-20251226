@@ -14,7 +14,8 @@
 >   - The official steps are built around NVIDIA SYNC connections; only three steps need to be changed to match the self-established remote connections.
 > - Simple one-line **SSH** command **login to DGX Spark**
 >   - After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.
-        
+### Congratulations - Now you can run Ollama via your Mac/PC browser — powered by DGX Spark's GPU!
+<br>
 
 > ## 適用情境 與 優點
 > **Mac/PC Client 開瀏覽器在 Open WebUI 介面上 → 透過自己建立的遠端連線 → 用 DGX Spark Server 的算力跑 Ollama**
@@ -25,13 +26,14 @@
 >   - 官方步驟是基於 NVIDIA SYNC app 連線的，只修改三個步驟就能匹配 自己建立的遠端連線
 > - **SHH 一行指令登入 DGX Spark**
 >   - 重開機之後，只要 Mac/PC (Client) 執行 `Step 4-3` 與 `Step 5`，超級簡單。
+### 恭喜你！從此你能在 Mac/PC，用 DGX Spark 的 GPU 算力，開網頁跑 Ollama 了！
+<br>
 
 ---
 
 ## 喜歡這個專案嗎？ 如果對您有幫助，請給一個 ★ Star 吧！這對我非常重要！
 
 ## If you find this project helpful, please give it a Star ★! Your support means a lot to me!
-
 
 ---
 Davis Lin (Sniper711) .
