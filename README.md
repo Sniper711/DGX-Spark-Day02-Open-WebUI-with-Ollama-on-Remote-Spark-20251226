@@ -14,7 +14,6 @@
 >   - The official steps are built around NVIDIA SYNC connections; only three steps need to be changed to match the self-established remote connections.
 > - Simple one-line **SSH** command **login to DGX Spark**
 >   - After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.
-
         
 
 > ## 適用情境 與 優點
