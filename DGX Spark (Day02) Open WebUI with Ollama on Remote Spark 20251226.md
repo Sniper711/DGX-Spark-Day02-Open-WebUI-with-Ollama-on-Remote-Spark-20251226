@@ -121,7 +121,7 @@ In the terminal window where you ran Step 4-3 (the SSH tunnel command), press `C
 ## Step 11. Cleanup and rollback
 (no change) 
 
-**Important: The following commands should be run directly on the DGX Spark Server (not from your Mac/PC client).**
+**Caution: **DO NOT** casually cleanup and rollback, and the following commands should be run directly on the DGX Spark Server (not from your Mac/PC client).**
 
 ---
 
