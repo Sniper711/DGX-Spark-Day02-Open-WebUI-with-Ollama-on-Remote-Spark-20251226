@@ -71,7 +71,7 @@ On Mac/PC Client, run the following command:
 exit
 ```
 
-### Modified Step 4-3. On Mac/PC Client, re-login to DGX Spark Server (this time specifying the Open WebUI communication port 12000 in Client site)
+### Modified Step 4-3. On Mac/PC Client, re-login to DGX Spark Server (this time specifying the Open WebUI communication port as 12000 in Client site)
 On Mac/PC Client, run the following command:
 ```
 # Remove `<DGX Spark username>`, and replace it with the username used to log in after DGX Spark boots
