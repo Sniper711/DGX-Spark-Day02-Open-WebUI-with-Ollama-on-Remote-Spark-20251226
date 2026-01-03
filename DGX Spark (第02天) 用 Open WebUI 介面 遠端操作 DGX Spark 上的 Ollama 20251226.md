@@ -73,7 +73,9 @@ exit
 ### 改為 Step 4-3. Mac/PC Client 重新登入 DGX Spark Server (這次有指定 Open WebUI 的通信 port number 12000)
 在 Mac/PC Client 上執行
 ```
-ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
+# 把 <DGX Spark username> 包含括弧刪掉, 置換成 DGX Spark 開機後登入的 username
+# 把 <192.168.x.x> 包含括弧刪掉, 置換成 DGX Spark 內網 IP 位址 (192.168.x.x) 的值
+ssh -4 -N -L 12000:0.0.0.0:3000 <DGX Spark username>@<192.168.x.x>
 ```
 <sub><sup>＊重開機之後，只要 Mac/PC (Client) 執行 `Step 4-3` 與 `Step 5`，超級簡單。</sup></sub>
 
