@@ -64,14 +64,14 @@ docker run -d \
 (*Note: Can be changed to --restart always to always restart regardless of how it was stopped.)
   - **ghcr.io/open-webui/open-webui:ollama** Use the Docker image ghcr.io/open-webui/open-webui:ollama to create the container.
 
-### Modified Step 4-2. On Mac/PC Client, log out from the temporary DGX Spark Server session established in Step 3 (no Open WebUI communication port was specified yet)
+### Modified Step 4-2. On Mac/PC Client, log out from the temporary DGX Spark Server session established in Step 3 (no Open WebUI communication port in Client site was specified yet)
 On Mac/PC Client, run the following command:
 ###### After executing the command, you will notice the terminal prompt changes — from the DGX Spark Server's format (e.g., <server-user>@Spark-xxxx:$) back to your local Mac/PC Client's prompt (e.g., <local-user>@<local-machine>%). This indicates a successful logout.
 ```
 exit
 ```
 
-### Modified Step 4-3. On Mac/PC Client, re-login to DGX Spark Server (this time specifying the Open WebUI communication port 12000)
+### Modified Step 4-3. On Mac/PC Client, re-login to DGX Spark Server (this time specifying the Open WebUI communication port 12000 in Client site)
 On Mac/PC Client, run the following command:
 ```
 # Remove `<DGX Spark username>`, and replace it with the username used to log in after DGX Spark boots
