@@ -74,7 +74,9 @@ exit
 ### Modified Step 4-3. On Mac/PC Client, re-login to DGX Spark Server (this time specifying the Open WebUI communication port 12000)
 On Mac/PC Client, run the following command:
 ```
-ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
+# Remove `<DGX Spark username>`, and replace it with the username used to log in after DGX Spark boots
+# Remove `<192.168.x.x>`, and replace it with DGX Spark intranet IP address (192.168.x.x)
+ssh -4 -N -L 12000:0.0.0.0:3000 <DGX Spark username>@<192.168.x.x>
 ```
 <sub><sup>＊After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.</sup></sub>
 
