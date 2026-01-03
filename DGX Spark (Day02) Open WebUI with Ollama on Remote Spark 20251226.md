@@ -101,6 +101,9 @@ ssh -4 -N -L 12000:0.0.0.0:3000 <DGX Spark username>@<192.168.x.x>
 
 ## Step 8. Test the model
 (no change)
+
+---
+
 ## That's it! All set and successful!!
 
 ---
