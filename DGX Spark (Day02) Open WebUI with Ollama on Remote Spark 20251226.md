@@ -73,11 +73,10 @@ exit
 
 ### Modified Step 4-3. On Mac/PC Client, re-login to DGX Spark Server (this time specifying the Open WebUI communication port 12000)
 On Mac/PC Client, run the following command:
-
-<sub><sup>＊After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.</sup></sub>
 ```
 ssh -4 -N -L 12000:0.0.0.0:3000 davislin@192.168.10.119
 ```
+<sub><sup>＊After rebooting, simply have the Mac/PC Client run `Step 4-3` and `Step 5` - it's super easy.</sup></sub>
 
 ---
 
