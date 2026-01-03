@@ -26,7 +26,7 @@
 
 ## Step 3. 打開 NVIDIA SYNC 軟體的設定畫面
 (不要做)(改成以下步驟)
-## 改為 Step 3. Mac/PC Client 暫時登入 DGX Spark Server (未指定 Open WebUI 的通信 port number)
+## 改為 Step 3. Mac/PC Client 暫時登入 DGX Spark Server (Client端 未指定 Open WebUI 的通信 port number)
 在 Mac/PC Client 上執行命令
 ###### 執行命令後，會看到終端機的命令提示字元變化，從 Mac/PC Client機的 <本機用戶>@<本機名稱>%，變成 DGX Server 機的 <server機用戶>@Spark-xxxx:$，表示已登入。
 ```
@@ -70,7 +70,7 @@ docker run -d \
 exit
 ```
 
-### 改為 Step 4-3. Mac/PC Client 重新登入 DGX Spark Server (這次有指定 Open WebUI 的通信 port number 12000)
+### 改為 Step 4-3. Mac/PC Client 重新登入 DGX Spark Server (這次 Client端 有指定 Open WebUI 的通信 port number 12000)
 在 Mac/PC Client 上執行
 ```
 # 把 <DGX Spark username> 包含括弧刪掉, 置換成 DGX Spark 開機後登入的 username
