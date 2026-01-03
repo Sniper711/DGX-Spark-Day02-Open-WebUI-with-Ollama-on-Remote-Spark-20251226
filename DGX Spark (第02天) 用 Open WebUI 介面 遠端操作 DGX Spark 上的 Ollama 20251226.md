@@ -118,7 +118,7 @@ ssh -4 -N -L 12000:0.0.0.0:3000 <DGX Spark username>@<192.168.x.x>
 ---
 
 ## Step 11. 清除與還原
-(步驟照做) (**警告：禁止隨意清除與還原，且 Step 11 是在 DGX Spark Server 上執行的命令**)
+(步驟照做) (警告：**不得**隨意清除與還原，且 Step 11 是在 DGX Spark Server 上執行的命令.)
 
 ---
 
